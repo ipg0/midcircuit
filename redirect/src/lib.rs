@@ -72,9 +72,11 @@ impl Plugin for CCRedirect {
                         context.send_event(NoteEvent::MidiCC {
                             timing,
                             channel,
-                            self.params.cc_to.value(),
+                            cc: self.params.cc_to.value() as u8,
                             value,
                         })
+                    } else {
+                        context.send_event(event)
                     }
                 }
                 _ => context.send_event(event),
