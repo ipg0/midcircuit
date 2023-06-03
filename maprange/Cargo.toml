@@ -1,0 +1,16 @@
+[package]
+name = "midcircuit-maprange"
+version = "0.1.0"
+edition = "2021"
+authors = ["notblank00 (Igor Gunin)"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+map-range = "0.1.1"
+nih_plug = { git = "https://github.com/robbert-vdh/nih-plug.git", features = [
+  "assert_process_allocs",
+] }
