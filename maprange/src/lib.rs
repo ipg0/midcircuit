@@ -47,7 +47,7 @@ impl Default for PluginParams {
             // This gain is stored as linear gain. NIH-plug comes with useful conversion functions
             // to treat these kinds of parameters as if we were dealing with decibels. Storing this
             // as decibels is easier to work with, but requires a conversion for every sample.
-            cc: IntParam::new("CC", 0, IntRange::Linear { min: 0, max: 15 }),
+            cc: IntParam::new("CC", 0, IntRange::Linear { min: 0, max: 127 }),
             in_low: FloatParam::new("In Low", 0., FloatRange::Linear { min: 0., max: 1. }),
             in_high: FloatParam::new("In Low", 0., FloatRange::Linear { min: 0., max: 1. }),
             out_low: FloatParam::new("In Low", 0., FloatRange::Linear { min: 0., max: 1. }),
